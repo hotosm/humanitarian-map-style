@@ -1,0 +1,19 @@
+# Families to build SDF glyphs from. Regular, Medium and Bold each.
+#
+# No CJK: MapLibre renders it from the client's own fonts by default
+# (localIdeographFontFamily), so those glyphs are never fetched.
+
+NotoSans            # Latin, Greek, Cyrillic
+NotoSansArabic
+NotoSansBengali     # Bangladesh
+NotoSansDevanagari  # Nepal, India
+NotoSansEthiopic    # Ethiopia
+NotoSansKhmer
+NotoSansLao
+NotoSansMyanmar
+NotoSansSinhala
+NotoSansTamil
+NotoSansThai
+NotoSansArmenian
+NotoSansGeorgian
+NotoSansHebrew

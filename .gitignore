@@ -1,0 +1,11 @@
+# Build output
+/dist/
+/sprite/
+/glyphs/
+*.pmtiles
+*.mbtiles
+*.osm.pbf
+
+# Local
+.env
+.DS_Store
