@@ -1,0 +1,28 @@
+{
+  "version": 8,
+  "name": "Humanitarian Map Style",
+  "sources": {
+    "osm": {
+      "type": "vector",
+      "url": "https://vector.openstreetmap.org/shortbread_v1/tilejson.json"
+    }
+  },
+  "layers": [
+    {
+      "id": "land-background",
+      "type": "background",
+      "paint": {
+        "background-color": "#F7F6F1"
+      }
+    },
+    {
+      "id": "ocean",
+      "type": "fill",
+      "source": "osm",
+      "source-layer": "ocean",
+      "paint": {
+        "fill-color": "#90CCCB"
+      }
+    }
+  ]
+}

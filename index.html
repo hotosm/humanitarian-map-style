@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Humanitarian Map Style Preview</title>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.19.0/dist/maplibre-gl.css">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #map {
+      position: fixed;
+      inset: 0;
+    }
+  </style>
+</head>
+<body>
+  <main id="map" aria-label="Humanitarian Map Style preview"></main>
+  <script type="module">
+    import { Map, NavigationControl } from 'https://unpkg.com/maplibre-gl@6.19.0/dist/maplibre-gl.mjs';
+
+    const map = new Map({
+      container: 'map',
+      style: './style.json',
+      center: [-72.34866, 18.53577],
+      zoom: 13,
+    });
+
+    map.addControl(new NavigationControl());
+  </script>
+</body>
+</html>
