@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
-# Preview: docker build --target build -t hdm-style . && docker run --rm -p 8765:8765 hdm-style
-# Files:   docker build --build-arg BASE_URL=https://example.org --output dist .
+# Preview: docker build --target build -t humanitarian-style . && docker run --rm -p 8765:8765 humanitarian-style
+# Files:   docker build --build-arg BASE_URL=https://map-style.hotosm.org --output dist .
 
 FROM rust:1.100-trixie AS tools
 RUN cargo install --locked spreet@0.14.0 build_pbf_glyphs@1.5.1

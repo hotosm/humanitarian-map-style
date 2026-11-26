@@ -12,9 +12,11 @@ and map data comes from `vector.openstreetmap.org`. No servers to run.
 ```js
 new maplibregl.Map({
   container: "map",
-  style: "https://hotosm.github.io/humanitarian-map-style/style.json",
+  style: "https://map-style.hotosm.org/style.json",
 });
 ```
+
+Demo map: https://map-style.hotosm.org
 
 In QGIS: Vector Tiles > New Generic Connection, and use the same URL as the
 Style URL.
@@ -27,8 +29,8 @@ edit the tables at the top of `style.py`, not the JSON.
 Preview with Docker, then open http://localhost:8765:
 
 ```sh
-docker build --target build -t hdm-style .
-docker run --rm -p 8765:8765 hdm-style
+docker build --target build -t humanitarian-style .
+docker run --rm -p 8765:8765 humanitarian-style
 ```
 
 Without Docker, install the tools once and run the script:
@@ -63,7 +65,6 @@ The style uses everything OSM's tiles provide. Remaining work:
 - **Road surface.** Paved vs unpaved needs our own road tiles: a weekly planet
   build to PMTiles on S3, roughly $40/month. Time a build first. The earlier
   design and costs are in `proposal.md` in commit `198e971`.
-- **Custom domain.** Point `hdm-style.hotosm.org` at GitHub Pages.
 - **Alternative.** [VersaTiles](https://versatiles.org) has polished styles on
   the same tiles. If upkeep here is a burden, recolour a VersaTiles style with
   HDM's palette and add the humanitarian layers on top.
