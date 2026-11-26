@@ -1,7 +1,6 @@
 # Build output
 /dist/
-/sprite/
-/glyphs/
+/build/
 *.pmtiles
 *.mbtiles
 *.osm.pbf

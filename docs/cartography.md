@@ -89,6 +89,9 @@ Surfaces:
 
 ## Road widths
 
+HDM's widths, for reference. `style.py` uses its own, based on VersaTiles
+Colorful, since HDM's were tuned for raster tiles.
+
 `r` is total width, `c` is casing, inline is `r - c`. Pixels at `@2x`. Below
 z11 roads are a single line: motorway and trunk at z5-8 (0.4 to 1 px), adding
 primary, secondary and tertiary at z9-10 (0.6 to 1.8 px).
@@ -125,7 +128,7 @@ at z11.
 
 ## Tag rules
 
-HDM-CartoCSS did this in SQL. The tilemaker Lua profile needs to do the same.
+HDM-CartoCSS did this in SQL. Any tiles we build ourselves need the same rules.
 
 ### Surface
 
@@ -165,8 +168,10 @@ otherwise `good`.
 
 ## Humanitarian attributes
 
-Shortbread v1 carries none of these. Road surface needs Stage 3; the rest can
-be a Stage 2 overlay.
+Shortbread v1 drops most of these. Its `pois` layer does keep raw `amenity`,
+`office`, `man_made`, `emergency` and `tower:type` tags, so healthcare, NGO and
+water-tower icons already work. Its `streets` layer lists a `surface` field
+but leaves it empty. See Next steps in the README for the rest.
 
 | Attribute | Tags |
 | --- | --- |

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: GPL-3.0-or-later
 # Download the Noto faces in fonts.txt. Fonts are unmodified upstream binaries,
 # so we fetch at build time and commit only the generated glyphs.
 #
@@ -6,7 +7,7 @@
 
 set -euo pipefail
 
-NOTO_REF="3a06b1c521155492df224d33464b3c7b2852d861"  # pinned; bump deliberately
+NOTO_REF="d14cc173a70dc57962ed2d4ad278fc9df83bf9f3"  # pinned; bump deliberately
 BASE="https://raw.githubusercontent.com/notofonts/notofonts.github.io/${NOTO_REF}/fonts"
 WEIGHTS=(Regular Medium Bold)
 
